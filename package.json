@@ -1,0 +1,19 @@
+{
+  "name": "@ioa/socket",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ioa": "^6.3.1",
+    "socket.io": "^2.2.0"
+  },
+  "files": [
+     "app",
+     "!app/node_modules"
+  ]
+}
