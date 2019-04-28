@@ -1,6 +1,6 @@
 {
   "name": "@ioa/socket",
-  "version": "0.0.2",
+  "version": "7.0.0-alpha.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,11 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ioa": "^6.3.1",
+    "ioa": "^7.0.0-alpha.2",
     "socket.io": "^2.2.0"
   },
   "files": [
-     "app",
-     "!app/node_modules"
+    "app",
+    "!app/node_modules"
   ]
 }

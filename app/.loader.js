@@ -3,7 +3,7 @@
 const component = require('@app');
 const directory = require('./directory.js');
 
-component.setOption({
+component.setLevels({
    "socket": {
       level: 60,
       directory

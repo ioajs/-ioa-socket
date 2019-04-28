@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-   '@components': {
+   'components': {
       ".": {
          "port": 9200
       }
