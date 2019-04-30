@@ -1,13 +1,9 @@
 'use strict';
 
-const component = require('@app');
-const directory = require('./directory.js');
+require('ioa-router');
 
-component.setLevels({
-   "socket": {
-      level: 60,
-      directory
+module.exports = {
+   "socket.js": {
+      "level": 100,
    },
-});
-
-module.exports = {}
+}
