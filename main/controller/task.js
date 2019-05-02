@@ -7,6 +7,8 @@ class Task {
 
       console.log(body);
 
+      ctx.emit('/task/queue', { type: "emit" });
+
    }
    async feedback(ctx) {
 
@@ -14,7 +16,7 @@ class Task {
 
       console.log(body);
 
-      ctx.emit('/task/queue', { ttt: 222 });
+      ctx.body = { type: "ctx.body" }
 
    }
 }

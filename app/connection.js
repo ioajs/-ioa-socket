@@ -1,16 +1,15 @@
 "use strict";
 
 const app = require('@app');
-const io = require('socket.io');
 const logger = require('loggercc');
 const routerMiddleware = require('ioa-router');
-const { socketScope } = require('ioa-router/lib/common.js');
+const { WebSocket } = require('ioa-router/lib/common.js');
 
-const { port } = app.config;
+const { socketIo, config } = app;
 
-logger.log(`socket: http://localhost:${port}`);
+const { port } = config;
 
-const socketIo = io(port);
+logger.log(`socket server: http://localhost:${port}`);
 
 socketIo.on('connection', function (socket) {
 
@@ -22,23 +21,23 @@ socketIo.on('connection', function (socket) {
 
    });
 
-   for (const scope of socketScope) {
+   for (const onPath of WebSocket) {
 
-      socket.on(scope, async body => {
+      socket.on(onPath, async body => {
 
          const ctx = {
-            path: scope,
-            method: "SOCKET",
+            path: onPath,
+            method: "WebSocket",
             request: { body },
             emit(...args) {
                socket.emit(...args);
-            }
+            },
          }
 
          await routerMiddleware(ctx);
 
          if (ctx.body) {
-            socket.emit(scope, ctx.body);
+            socket.emit(onPath, ctx.body);
          }
 
       });
@@ -46,6 +45,3 @@ socketIo.on('connection', function (socket) {
    }
 
 });
-
-module.exports = socketIo;
-
