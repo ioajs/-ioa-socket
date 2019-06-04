@@ -6,7 +6,7 @@ ioa.loader({
    "./main": {
       "enable": true,
       "components": {
-         './': {
+         './app': {
             "enable": true,
          }
       },

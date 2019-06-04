@@ -1,6 +1,6 @@
 {
   "name": "@ioa/socket",
-  "version": "7.0.0-alpha.3",
+  "version": "7.1.0",
   "description": "ioa socket服务端",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ioa": "^7.0.0-alpha.5",
-    "ioa-router": "0.0.9",
+    "ioa": "^7.1.0",
+    "ioa-router": "^0.1.0",
     "socket.io": "^2.2.0"
   },
   "files": [

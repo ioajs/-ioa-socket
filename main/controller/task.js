@@ -16,7 +16,9 @@ class Task {
 
       console.log(body);
 
-      ctx.body = { type: "ctx.body" }
+      ctx.body = {
+         type: "ctx.body"
+      }
 
    }
 }

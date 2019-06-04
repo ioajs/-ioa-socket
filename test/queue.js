@@ -1,8 +1,8 @@
 "use strict";
 
-const client = require('socket.io-client');
+const io = require('socket.io-client');
 
-const socket = client.connect(`http://localhost:9200`);
+const socket = io.connect(`http://localhost:9200`);
 
 socket.on('connect', function () {
 
@@ -10,10 +10,13 @@ socket.on('connect', function () {
 
       console.log(data);
 
-      // socket.emit('/task/queue', [1, 2, 3]);
+      // socket.emit('/task/feedback', [1, 2, 3]);
 
-   })
+   });
 
-   socket.emit('/task/queue', [99.9, 34]);
-   
+   socket.emit('/task/queue', {
+      a: 1,
+      b: 2,
+   });
+
 })
