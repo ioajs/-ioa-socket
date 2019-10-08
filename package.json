@@ -1,6 +1,6 @@
 {
   "name": "@ioa/socket",
-  "version": "9.4.0",
+  "version": "9.4.1",
   "description": "ioa socket服务端",
   "main": "lib/",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "ioa": "^9.4.1",
-    "ioa-router": "^0.1.0",
+    "ioa-router": "^9.2.1",
     "socket.io": "^2.2.0"
   },
   "files": [
