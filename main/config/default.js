@@ -1,9 +1,7 @@
 'use strict';
 
 module.exports = {
-   'components': {
-      "./app": {
-         "port": 9200
-      }
-   },
+   "lib": {
+      "port": 9200
+   }
 }
